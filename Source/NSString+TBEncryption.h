@@ -12,5 +12,6 @@
 
 - (NSString *)tb_MD5String;
 - (NSString *)tb_SHA1String;
+- (NSString *)tb_base64String;
 
 @end

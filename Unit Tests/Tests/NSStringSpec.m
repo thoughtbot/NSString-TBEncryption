@@ -18,4 +18,12 @@ describe(@"SHA-1 Encryption", ^{
     });
 });
 
+describe(@"Base64 Encryption", ^{
+    it(@"Converts a string to a Base64 representation", ^{
+        NSString *base64 = [@"thoughtbot" tb_base64String];
+        NSString *base64Actual = @"dGhvdWdodGJvdA==";
+        expect(base64).to.equal(base64Actual);
+    });
+});
+
 SpecEnd

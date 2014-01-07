@@ -38,4 +38,10 @@
     return [output copy];
 }
 
+- (NSString *)tb_base64String
+{
+    NSData *stringData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    return [stringData base64EncodedStringWithOptions:0];
+}
+
 @end
