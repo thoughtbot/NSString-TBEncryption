@@ -24,4 +24,18 @@
     return [output copy];
 }
 
+- (NSString *)tb_SHA1String
+{
+    const char *ptr = [self UTF8String];
+
+    unsigned char sha1Buffer[CC_SHA1_DIGEST_LENGTH];
+    CC_SHA1(ptr, (CC_LONG)strlen(ptr), sha1Buffer);
+    NSMutableString *output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+    for (int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++) {
+        [output appendFormat:@"%02x", sha1Buffer[i]];
+    }
+
+    return [output copy];
+}
+
 @end

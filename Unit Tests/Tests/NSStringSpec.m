@@ -10,4 +10,12 @@ describe(@"MD5 Encryption", ^{
     });
 });
 
+describe(@"SHA-1 Encryption", ^{
+    it(@"Converts a string to a SHA-1 representation", ^{
+        NSString *sha1 = [@"thoughtbot" tb_SHA1String];
+        NSString *sha1Actual = @"d4e80756452178b68f001fce9190fb8a7cdedc26";
+        expect(sha1).to.equal(sha1Actual);
+    });
+});
+
 SpecEnd

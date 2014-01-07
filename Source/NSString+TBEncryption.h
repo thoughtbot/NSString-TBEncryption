@@ -11,5 +11,6 @@
 @interface NSString (TBEncryption)
 
 - (NSString *)tb_MD5String;
+- (NSString *)tb_SHA1String;
 
 @end
