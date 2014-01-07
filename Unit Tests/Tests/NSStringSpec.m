@@ -29,9 +29,8 @@ describe(@"Base64 Encryption", ^{
 describe(@"XOR Encryption", ^{
     it(@"Converts a string to an XOR encrypted representation", ^{
         NSString *xor = [@"thoughtbot" tb_XORStringWithSecret:@"1234567890"];
-        NSString *xorHex = [NSString stringWithFormat:@"%@", [xor dataUsingEncoding:NSUTF8StringEncoding]];
-        NSString *xorHexActual = @"<455a5c41 525e435a 5644>";
-        expect(xorHex).to.equal(xorHexActual);
+        NSString *xorActual = @"455a5c41525e435a5644";
+        expect(xor).to.equal(xorActual);
     });
 });
 

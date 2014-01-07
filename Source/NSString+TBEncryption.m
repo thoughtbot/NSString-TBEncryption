@@ -46,28 +46,16 @@
 
 - (NSString *)tb_XORStringWithSecret:(NSString *)secret
 {
-    NSMutableData *stringData = [[self dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
-    NSData *secretData = [secret dataUsingEncoding:NSUTF8StringEncoding];
+    const char *stringPtr = [self UTF8String];
+    const char *secretPtr = [secret UTF8String];
+    NSMutableString *output = [NSMutableString stringWithCapacity:[self length]];
 
-    char *stringPtr = [stringData mutableBytes];
-    const char *secretPtr = [secretData bytes];
-    NSUInteger keyIndex = 0;
-
-    for (NSUInteger i = 0; i < [stringData length]; i++) {
-        *stringPtr = *stringPtr ^ *secretPtr;
-        NSData *foo = [NSData dataWithBytes:stringPtr length:1];
-        NSLog(@"CHAR: %@", foo);
-        stringPtr++;
-        secretPtr++;
-
-        if (++keyIndex == [secret length]) {
-            keyIndex = 0;
-            secretPtr = [secretData bytes];
-        }
+    for (NSUInteger i = 0; i < [self length]; i++) {
+        char c = stringPtr[i] ^ secretPtr[i % [secret length]];
+        [output appendFormat:@"%02x", c];
     }
 
-    NSString *result = [[NSString alloc] initWithData:stringData encoding:NSUTF8StringEncoding];
-    return result;
+    return [output copy];
 }
 
 @end
