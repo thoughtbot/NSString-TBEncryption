@@ -44,4 +44,30 @@
     return [stringData base64EncodedStringWithOptions:0];
 }
 
+- (NSString *)tb_XORStringWithSecret:(NSString *)secret
+{
+    NSMutableData *stringData = [[self dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
+    NSData *secretData = [secret dataUsingEncoding:NSUTF8StringEncoding];
+
+    char *stringPtr = [stringData mutableBytes];
+    const char *secretPtr = [secretData bytes];
+    NSUInteger keyIndex = 0;
+
+    for (NSUInteger i = 0; i < [stringData length]; i++) {
+        *stringPtr = *stringPtr ^ *secretPtr;
+        NSData *foo = [NSData dataWithBytes:stringPtr length:1];
+        NSLog(@"CHAR: %@", foo);
+        stringPtr++;
+        secretPtr++;
+
+        if (++keyIndex == [secret length]) {
+            keyIndex = 0;
+            secretPtr = [secretData bytes];
+        }
+    }
+
+    NSString *result = [[NSString alloc] initWithData:stringData encoding:NSUTF8StringEncoding];
+    return result;
+}
+
 @end
