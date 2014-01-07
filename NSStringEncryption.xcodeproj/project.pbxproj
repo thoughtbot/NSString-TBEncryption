@@ -12,6 +12,7 @@
 		F831EF2F187C5BBB00384844 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F831EF14187C5BBB00384844 /* Foundation.framework */; };
 		F831EF30187C5BBB00384844 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F831EF18187C5BBB00384844 /* UIKit.framework */; };
 		F8AFF56E187C5DB800911FFC /* NSStringSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AFF56D187C5DB800911FFC /* NSStringSpec.m */; };
+		F8AFF571187C5F0400911FFC /* NSString+TBEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AFF570187C5F0400911FFC /* NSString+TBEncryption.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,9 @@
 		F831EF2C187C5BBB00384844 /* NSStringEncryptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSStringEncryptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F831EF2D187C5BBB00384844 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F8AFF56D187C5DB800911FFC /* NSStringSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringSpec.m; sourceTree = "<group>"; };
+		F8AFF56F187C5F0400911FFC /* NSString+TBEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TBEncryption.h"; sourceTree = "<group>"; };
+		F8AFF570187C5F0400911FFC /* NSString+TBEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TBEncryption.m"; sourceTree = "<group>"; };
+		F8AFF572187C628100911FFC /* libcommonCrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommonCrypto.dylib; path = usr/lib/system/libcommonCrypto.dylib; sourceTree = SDKROOT; };
 		F8C87A75187C5D01003104FF /* NSStringEncryptionTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NSStringEncryptionTests-Info.plist"; sourceTree = "<group>"; };
 		F8C87A78187C5D1D003104FF /* NSStringEncryptionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSStringEncryptionTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +71,7 @@
 		F831EF13187C5BBB00384844 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F8AFF572187C628100911FFC /* libcommonCrypto.dylib */,
 				F831EF14187C5BBB00384844 /* Foundation.framework */,
 				F831EF16187C5BBB00384844 /* CoreGraphics.framework */,
 				F831EF18187C5BBB00384844 /* UIKit.framework */,
@@ -79,6 +84,8 @@
 		F8C87A72187C5D01003104FF /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F8AFF56F187C5F0400911FFC /* NSString+TBEncryption.h */,
+				F8AFF570187C5F0400911FFC /* NSString+TBEncryption.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -211,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8AFF571187C5F0400911FFC /* NSString+TBEncryption.m in Sources */,
 				F8AFF56E187C5DB800911FFC /* NSStringSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +341,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Unit Tests/Resources/NSStringEncryptionTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -352,6 +364,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Unit Tests/Resources/NSStringEncryptionTests-Prefix.pch";
 				INFOPLIST_FILE = "Unit Tests/Resources/NSStringEncryptionTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
