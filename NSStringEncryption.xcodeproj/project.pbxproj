@@ -26,7 +26,6 @@
 		F8AFF56D187C5DB800911FFC /* NSStringSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringSpec.m; sourceTree = "<group>"; };
 		F8AFF56F187C5F0400911FFC /* NSString+TBEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TBEncryption.h"; sourceTree = "<group>"; };
 		F8AFF570187C5F0400911FFC /* NSString+TBEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TBEncryption.m"; sourceTree = "<group>"; };
-		F8AFF572187C628100911FFC /* libcommonCrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommonCrypto.dylib; path = usr/lib/system/libcommonCrypto.dylib; sourceTree = SDKROOT; };
 		F8C87A75187C5D01003104FF /* NSStringEncryptionTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NSStringEncryptionTests-Info.plist"; sourceTree = "<group>"; };
 		F8C87A78187C5D1D003104FF /* NSStringEncryptionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSStringEncryptionTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +70,6 @@
 		F831EF13187C5BBB00384844 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F8AFF572187C628100911FFC /* libcommonCrypto.dylib */,
 				F831EF14187C5BBB00384844 /* Foundation.framework */,
 				F831EF16187C5BBB00384844 /* CoreGraphics.framework */,
 				F831EF18187C5BBB00384844 /* UIKit.framework */,
