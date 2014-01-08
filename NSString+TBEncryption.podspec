@@ -14,12 +14,12 @@ Pod::Spec.new do |s|
                    DESC
 
   s.license      = 'MIT'
-  s.homepage     = 'https://github.com/thoughtbot/NSString-Encryption'
+  s.homepage     = 'https://github.com/thoughtbot/NSString-TBEncryption'
   s.author       = { "Gordon Fontenot" => "gordon@thoughtbot.com" }
   s.ios.deployment_target = '7.0'
   s.osx.deployment_target = '10.9'
 
-  s.source       = { :git => 'https://github.com/thoughtbot/NSString-Encryption.git', :tag => s.version.to_s }
+  s.source       = { :git => 'https://github.com/thoughtbot/NSString-TBEncryption.git', :tag => s.version.to_s }
 
   s.source_files  = 'Source'
   s.requires_arc = true

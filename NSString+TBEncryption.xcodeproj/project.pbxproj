@@ -21,13 +21,13 @@
 		F831EF14187C5BBB00384844 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F831EF16187C5BBB00384844 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F831EF18187C5BBB00384844 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F831EF2C187C5BBB00384844 /* NSStringEncryptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSStringEncryptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F831EF2C187C5BBB00384844 /* NSString+TBEncryptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSString+TBEncryptionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F831EF2D187C5BBB00384844 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F8AFF56D187C5DB800911FFC /* NSStringSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringSpec.m; sourceTree = "<group>"; };
 		F8AFF56F187C5F0400911FFC /* NSString+TBEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TBEncryption.h"; sourceTree = "<group>"; };
 		F8AFF570187C5F0400911FFC /* NSString+TBEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TBEncryption.m"; sourceTree = "<group>"; };
-		F8C87A75187C5D01003104FF /* NSStringEncryptionTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NSStringEncryptionTests-Info.plist"; sourceTree = "<group>"; };
-		F8C87A78187C5D1D003104FF /* NSStringEncryptionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSStringEncryptionTests-Prefix.pch"; sourceTree = "<group>"; };
+		F8C87A75187C5D01003104FF /* NSString+TBEncryptionTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NSString+TBEncryptionTests-Info.plist"; sourceTree = "<group>"; };
+		F8C87A78187C5D1D003104FF /* NSString+TBEncryptionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+TBEncryptionTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		F831EF12187C5BBB00384844 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F831EF2C187C5BBB00384844 /* NSStringEncryptionTests.xctest */,
+				F831EF2C187C5BBB00384844 /* NSString+TBEncryptionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,8 +100,8 @@
 		F8C87A74187C5D01003104FF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F8C87A75187C5D01003104FF /* NSStringEncryptionTests-Info.plist */,
-				F8C87A78187C5D1D003104FF /* NSStringEncryptionTests-Prefix.pch */,
+				F8C87A75187C5D01003104FF /* NSString+TBEncryptionTests-Info.plist */,
+				F8C87A78187C5D1D003104FF /* NSString+TBEncryptionTests-Prefix.pch */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -117,9 +117,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F831EF2B187C5BBB00384844 /* NSStringEncryptionTests */ = {
+		F831EF2B187C5BBB00384844 /* NSString+TBEncryptionTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F831EF40187C5BBB00384844 /* Build configuration list for PBXNativeTarget "NSStringEncryptionTests" */;
+			buildConfigurationList = F831EF40187C5BBB00384844 /* Build configuration list for PBXNativeTarget "NSString+TBEncryptionTests" */;
 			buildPhases = (
 				88EFBE3A95754EEF9DF71AB5 /* Check Pods Manifest.lock */,
 				F831EF28187C5BBB00384844 /* Sources */,
@@ -131,9 +131,9 @@
 			);
 			dependencies = (
 			);
-			name = NSStringEncryptionTests;
+			name = "NSString+TBEncryptionTests";
 			productName = NSStringEncryptionTests;
-			productReference = F831EF2C187C5BBB00384844 /* NSStringEncryptionTests.xctest */;
+			productReference = F831EF2C187C5BBB00384844 /* NSString+TBEncryptionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +151,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F831EF0C187C5BBB00384844 /* Build configuration list for PBXProject "NSStringEncryption" */;
+			buildConfigurationList = F831EF0C187C5BBB00384844 /* Build configuration list for PBXProject "NSString+TBEncryption" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -163,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F831EF2B187C5BBB00384844 /* NSStringEncryptionTests */,
+				F831EF2B187C5BBB00384844 /* NSString+TBEncryptionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,17 +333,17 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Unit Tests/Resources/NSStringEncryptionTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "Unit Tests/Resources/NSString+TBEncryptionTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Unit Tests/Resources/NSStringEncryptionTests-Info.plist";
+				INFOPLIST_FILE = "Unit Tests/Resources/NSString+TBEncryptionTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NSString+TBEncryptionTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -360,13 +360,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Unit Tests/Resources/NSStringEncryptionTests-Prefix.pch";
-				INFOPLIST_FILE = "Unit Tests/Resources/NSStringEncryptionTests-Info.plist";
+				GCC_PREFIX_HEADER = "Unit Tests/Resources/NSString+TBEncryptionTests-Prefix.pch";
+				INFOPLIST_FILE = "Unit Tests/Resources/NSString+TBEncryptionTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NSString+TBEncryptionTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -375,7 +375,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F831EF0C187C5BBB00384844 /* Build configuration list for PBXProject "NSStringEncryption" */ = {
+		F831EF0C187C5BBB00384844 /* Build configuration list for PBXProject "NSString+TBEncryption" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F831EF3B187C5BBB00384844 /* Debug */,
@@ -384,7 +384,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F831EF40187C5BBB00384844 /* Build configuration list for PBXNativeTarget "NSStringEncryptionTests" */ = {
+		F831EF40187C5BBB00384844 /* Build configuration list for PBXNativeTarget "NSString+TBEncryptionTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F831EF41187C5BBB00384844 /* Debug */,
